@@ -1,0 +1,136 @@
+/*Selector universal, aplica a todo el doc*/
+
+* {
+    margin: 0; /*Elimina márgenes*/
+    padding: 0; /*Elimina rellenos*/
+    box-sizing: border-box; /*hace que el ancho/alto incluya bordes y padding, facilitando el diseño*/
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6; /*Espacio entre líneas corte interlineado word*/
+    padding: 0 20px; /*Le da espacio lateral al texto*/
+}
+
+header {
+    background-color: #1f2937;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid #3b82f6; /*Línea inferior azul*/
+}
+
+.nombre {
+    font-size: 2.5em;
+    margin-bottom: 10px; /*Espacio debajo del nombre*/
+}
+
+.frase {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #cbd5e1;
+    display: block; /*Hace que la frase ocupe toda la línea, ni arriba ni abajo*/
+    margin-bottom: 15px;
+}
+
+.navbar ul { /*Estilo de la barra de navegación, específico la lista*/
+    list-style: none; /*Elimina los puntos de la lista*/
+    display: flex; /*Hace que por defecto los elementos estén en fila y ocupen todo el ancho*/
+    justify-content: center; /*Centra los elementos horizontalmente*/
+    gap: 20px; /*Espacio entre los elementos de la lista*/
+    flex-wrap: wrap; /*Permite que los elementos se ajusten a varias líneas si la pantalla es más chica*/
+    margin-top: 10px;
+}
+
+.navbar a { /*Estilo de la barra de navegación, específico los enlaces*/
+    text-decoration: none; /*Elimina el subrayado de los enlaces*/
+    color: #facc15; 
+    font-weight: bold; /*Negrita para los enlaces*/
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #fff; /*Cambia el color al pasar el mouse*/
+}
+
+.seccion {
+    padding: 40px 20px; 
+    max-width: 1000px; /*Ancho máximo de la sección*/
+    margin: auto;
+}
+
+h2 {
+    color: #1f2937;
+    font-size: 1.8em;
+    border-left: 5px solid #3b82f6;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.div-sobre-mi {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.mi-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /*Hace que la foto sea redonda*/
+    object-fit: cover; /*Recorta y ajusta la imagen para que ocupe todo el espacio del div sin deformarse*/
+    border: 3px solid #3b82f6; /*Borde azul alrededor de la foto*/
+}
+
+.div-sobre-mi p {
+    flex: 1; /*Hace que el párrafo ocupe todo el espacio posible*/
+    font-size: 1.1em;
+}
+
+.lista-experiencia {
+    padding-left: 20px;
+}
+
+.lista-experiencia li {
+    margin-bottom: 20px;
+}
+
+.lista-experiencia ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.lista-experiencia h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #374151;
+}
+
+#contact p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+@media (max-width: 600px) { /*Modo responsivo para pantallas tipo cel*/
+    .div-sobre-mi {
+        flex-direction: column; /*Apila todo verticalmente*/
+        text-align: center; /*Centra el texto*/
+    }
+
+    .navbar ul {
+        flex-direction: column; /*Apila los enlaces verticalmente*/
+        gap: 10px;
+    }
+}
+
+footer {
+    background-color: #1f2937;
+    font-size: 50%; /*Tamaño de fuente relativo al body*/
+    color: white;
+    padding: 4px 2px; /*El primer numero es el alto, el segundo es el ancho*/
+    text-align: center;
+    border-bottom: 5px solid #0077be;
+}
