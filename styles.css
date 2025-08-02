@@ -1,6 +1,4 @@
-/*Selector universal, aplica a todo el doc*/
-
-* {
+* { /*Selector universal, aplica a todo el doc*/
     margin: 0; /*Elimina márgenes*/
     padding: 0; /*Elimina rellenos*/
     box-sizing: border-box; /*hace que el ancho/alto incluya bordes y padding, facilitando el diseño*/
